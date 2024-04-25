@@ -2,7 +2,7 @@ import keyboard
 import requests
 import time
 import json
-import getpass
+import socket
 import tkinter as tk
 from tkinter import simpledialog
 from tkinter import messagebox
@@ -82,7 +82,10 @@ def print_window(output_text):
 
 # Get the current users username
 def username():
-    return getpass.getuser().lower().strip().replace('.', '_')
+    # u = getpass.getuser().lower().strip().replace('.', '_')
+    u = socket.gethostname().lower().strip().replace('.', '_')
+    # print(u)
+    return u
 
 # Setup a first time user
 def setup_user():
