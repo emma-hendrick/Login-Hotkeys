@@ -8,6 +8,7 @@ from tkinter import simpledialog
 from tkinter import messagebox
 import ctypes
 import pygetwindow as gw
+import sys
 
 cred_names = {
     "Sign in to Steam": "steam",
@@ -82,6 +83,10 @@ def print_window(output_text):
 
 # Get the current users username
 def username():
+    print(sys.argv[2])
+    if sys.argv[2] is not None:
+        #return sys.argv[0]
+        pass
     # u = getpass.getuser().lower().strip().replace('.', '_')
     u = socket.gethostname().lower().strip().replace('.', '_')
     # print(u)
