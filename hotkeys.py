@@ -15,7 +15,8 @@ import os
 cred_names = {
     "Sign in to Steam": "steam",
     "Epic Games Launcher": "epic",
-    "Sign in - Google Accounts - Google Chrome": "google"
+    "Sign in - Google Accounts - Google Chrome": "google",
+    "EA": "ea"
 }
 
 # Whether to associate a credential with a user or the computer
@@ -23,7 +24,8 @@ cred_names = {
 use_user = {
     "steam": False,
     "epic": False,
-    "google": True
+    "google": True,
+    "ea": False
 }
     
 def single_window_login(username, password):
@@ -87,7 +89,8 @@ def two_window_standard_login(username, password):
 cred_login_files = {
     "steam": single_window_login,
     "epic": two_window_epic_login,
-    "google": two_window_standard_login
+    "google": two_window_standard_login,
+    "ea": single_window_login
 }
 
 # For restricted actions
