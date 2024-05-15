@@ -239,12 +239,9 @@ def do_setup():
 
 # Setup a user
 def do_setup_user():
-    if is_admin():
-        output = setup_user(True)
-        if output is None: return None
-        print_window(output)
-    else:
-        print_window("You need to run this as an admin to setup users.")
+    output = setup_user(True)
+    if output is None: return None
+    print_window(output)
 
 # When we are executed directly
 def main():
