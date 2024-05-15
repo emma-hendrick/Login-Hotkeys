@@ -16,7 +16,8 @@ cred_names = {
     "Sign in to Steam": "steam",
     "Epic Games Launcher": "epic",
     "Sign in - Google Accounts - Google Chrome": "google",
-    "EA": "ea"
+    "EA": "ea",
+    "Ubisoft Connect": "ubisoft"
 }
 
 # Whether to associate a credential with a user or the computer
@@ -25,7 +26,8 @@ use_user = {
     "steam": False,
     "epic": False,
     "google": True,
-    "ea": False
+    "ea": False,
+    "Ubisoft Connect": False
 }
     
 def single_window_login(username, password):
@@ -90,7 +92,8 @@ cred_login_files = {
     "steam": single_window_login,
     "epic": two_window_epic_login,
     "google": two_window_standard_login,
-    "ea": single_window_login
+    "ea": single_window_login,
+    "ubisoft": single_window_login
 }
 
 # For restricted actions
