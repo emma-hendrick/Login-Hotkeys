@@ -27,7 +27,7 @@ use_user = {
     "epic": False,
     "google": True,
     "ea": False,
-    "Ubisoft Connect": False
+    "ubisoft": False
 }
     
 def single_window_login(username, password):
