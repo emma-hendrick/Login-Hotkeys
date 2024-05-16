@@ -17,7 +17,8 @@ cred_names = {
     "Epic Games Launcher": "epic",
     "Sign in - Google Accounts - Google Chrome": "google",
     "EA": "ea",
-    "Ubisoft Connect": "ubisoft"
+    "Ubisoft Connect": "ubisoft",
+    "Login - Spotify - Google Chrome": "spotify"
 }
 
 # Whether to associate a credential with a user or the computer
@@ -27,7 +28,8 @@ use_user = {
     "epic": False,
     "google": True,
     "ea": False,
-    "ubisoft": False
+    "ubisoft": False,
+    "spotify": True
 }
     
 def single_window_login(username, password):
@@ -93,7 +95,8 @@ cred_login_files = {
     "epic": two_window_epic_login,
     "google": two_window_standard_login,
     "ea": single_window_login,
-    "ubisoft": single_window_login
+    "ubisoft": single_window_login,
+    "spotify": single_window_login
 }
 
 # For restricted actions
