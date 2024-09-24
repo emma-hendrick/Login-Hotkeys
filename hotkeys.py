@@ -92,7 +92,7 @@ def two_window_standard_login(username, password):
 
 cred_login_files = {
     "steam": single_window_login,
-    "epic": two_window_epic_login,
+    "epic": single_window_login,
     "google": two_window_standard_login,
     "ea": single_window_login,
     "ubisoft": single_window_login,
