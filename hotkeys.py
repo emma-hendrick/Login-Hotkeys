@@ -151,6 +151,7 @@ def username(isUser=False):
 # Setup a first time user
 def setup_user(asUser=False):
     # Send HTTP GET request to your server
+    print(f'Getting http://localhost:3001/user/{username(asUser)}')
     response = requests.get(f'http://localhost:3001/user/{username(asUser)}')
     # Get the response text
     output = response.text
@@ -161,6 +162,7 @@ def get_credential(credential):
     if credential is None: return None
     asUser = use_user[credential]
     # Send HTTP GET request to your server
+    print(f'Getting http://localhost:3001/credential/{username(asUser)}/{credential}')
     response = requests.get(f'http://localhost:3001/credential/{username(asUser)}/{credential}')
     # Get the response text
     output = response.text
@@ -176,6 +178,7 @@ def set_credential(credential, user, pw):
         'password': pw
     }
     # Send HTTP GET request to your server
+    print(f'Posting {data} to  http://localhost:3001/credential/{username(asUser)}/{credential}')
     response = requests.post(f'http://localhost:3001/credential/{username(asUser)}/{credential}', json=data)
     # Get the response text
     output = response.text
@@ -186,6 +189,7 @@ def del_credential(credential):
     if credential is None: return None
     asUser = use_user[credential]
     # Send HTTP GET request to your server
+    print(f'Deleting http://localhost:3001/credential/{username(asUser)}/{credential}')
     response = requests.delete(f'http://localhost:3001/credential/{username(asUser)}/{credential}')
     # Get the response text
     output = response.text
